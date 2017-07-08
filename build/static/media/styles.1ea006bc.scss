@@ -1,0 +1,116 @@
+/* Imports */
+@import 'dialog';
+@import 'header';
+
+@import 'colors';
+$bg-img-top: url('../assets/img/bg-clouds.png');
+$bg-img-bottom: url('../assets/img/bg-vertical-dots.png');
+
+html,body,blockquote,code,h1,h2,h3,h4,h5,h6,p,pre{margin:0;padding:0}
+
+
+html {
+  background-color: $bodyBackgroundColor;
+}
+/* Styles */
+html,body {
+  height: 100%;
+}
+
+
+body {
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  // line-height: 1.4em;
+  color: #4d4d4d;
+  min-width: 230px;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-weight: 300;
+  overflow: hidden;
+
+  background: $bg-img-top top left repeat-x,
+  $bg-img-bottom bottom left repeat-x;
+
+  background-size: auto 75%, auto 35%;
+  //background-image: $bg-img-bottom 50px 500px repeat;
+
+}
+
+td {
+  padding: 12px;
+}
+
+h2 {
+  color: $deepSkyBlue;
+}
+
+h3 {
+  color: $orange;
+}
+
+#app {
+  height: -webkit-calc(100%);
+  height:    -moz-calc(100%);
+  height:         calc(100%);
+}
+
+#app div {
+  height: 100%;
+}
+#content-body-wrapper.hide-left-nav {
+  margin-left: 0px;
+}
+
+#content-body-wrapper {
+  height: -webkit-calc(100% - 5px) !important;
+  height:    -moz-calc(100% - 5px);
+  height:         calc(100% - 5px) !important;
+
+  padding-left: 0px;
+  padding-right: 0px;
+  display: block;
+  margin-left: 0px;
+
+  background: $contentBackgroundColor;
+
+  -webkit-transition: margin-left .1s linear;
+  -moz-transition: margin-left .1s linear;
+  -o-transition: margin-left .1s linear;
+  transition: margin-left .1s linear;
+
+  #content-body {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+#left-nav-wrapper {
+  transition: all .2s linear;
+
+  h2 {
+    padding: 0 0 10px 15px;
+  }
+}
+
+// Common classes
+.error {
+  color: $errorColor;
+}
+
+.success {
+  color: $successColor !important;
+  fill: $successColor !important;
+}
+
+// Helper classes
+.pull-left {
+  float: left !important;
+}
+.pull-right {
+  float: right !important;
+}
+
+.clear-it {
+  clear: 'both';
+}
